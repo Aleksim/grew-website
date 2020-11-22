@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-sharp`,`gatsby-plugin-styled-components`,`gatsby-transformer-sharp`,{
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-sharp`,`gatsby-plugin-styled-components`,'gatsby-plugin-simple-analytics',`gatsby-transformer-sharp`,{
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
