@@ -73,7 +73,7 @@ const Work = () => {
                                             Privacy-first alternative for detecting user location in browsers without sending coordinate-data away.
                                             </p>
                                             
-                                            <button onClick={()=>{openInNewTab('https://discord.gg/tjyaZDY')}} class="button is-primary is-large"><span><strong>&rarr; pointNG.io</strong></span></button>
+                                            <button onClick={()=>{openInNewTab('https://www.pointng.io')}} class="button is-primary is-large"><span><strong>&rarr; pointNG.io</strong></span></button>
                                         </div>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ const Work = () => {
                                                 Privacy-friendly local weather forecasts. No tracking or transferring of coordinate-data.                                            
                                             </p>
                                             
-                                            <button onClick={()=>{openInNewTab('https://gifted-davinci-a1defb.netlify.app/')}} class="button is-primary is-large"><span><strong>&rarr; prototype</strong></span></button>
+                                            <button onClick={()=>{openInNewTab('https://proto.secureweather.io')}} class="button is-primary is-large"><span><strong>&rarr; prototype</strong></span></button>
                                         </div>
                                 </div>
 
@@ -159,7 +159,7 @@ const Work = () => {
                                                 Predict whether your website visitors will buy or bounce. Optimize your website in real-time.                                            
                                             </p>
                                             
-                                            <button onClick={()=>{openInNewTab('https://gifted-davinci-a1defb.netlify.app/')}} class="button is-primary is-large"><span><strong>&rarr; Pixtu.io</strong></span></button>
+                                            <button onClick={()=>{openInNewTab('https://www.pixtu.io')}} class="button is-primary is-large"><span><strong>&rarr; Pixtu.io</strong></span></button>
                                         </div>
                                 </div>
 
