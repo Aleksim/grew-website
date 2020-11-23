@@ -13,10 +13,7 @@ import { Link } from "gatsby"
 To detect your website or webapp users’ location, you have options to either use browser’s Geolocation API or the client’s IP-address. Whether your goal is to eg. personalize content, target advertisement, or create redirects, you need to send your users’ latitude and longitude data, or IP-address to a third-party geocoding service. These services extract the readable place names from the data and return it to your client.
 
 <p>
-  The process is straightforward, but it comes with privacy drawbacks. The
-  minimum action that a responsible developer should do is to update their
-  website’s privacy policy. In some use-cases it’s necessarily to consult
-  lawyers what GDPR / CCPA states about the usage and sharing of location data.
+  The process is straightforward, but it comes with privacy drawbacks.
 </p>
 
 ## Hyper-secure location detection with pointNG
@@ -30,7 +27,7 @@ To save time and avoid privacy-headaches, follow these steps to identify your us
 </ul>
 
 ```js
-<script src="https://cdn.pointng.io/pointng.js"></script>
+<script src="https://cdn.pointng.io/pointng-min.js"></script>
 ```
 
 <ul>
@@ -40,18 +37,14 @@ To save time and avoid privacy-headaches, follow these steps to identify your us
 ```js
 const pointng = new PointNG({
  level: ‘country’,
- api_key: ‘YOUR-API-KEY-HERE’,
- useIpGeolocation: false
+ api_key: ‘YOUR-API-KEY-HERE’
 });
 ```
 
 Use the ‘level’ parameter to choose the level you wish to identify your users’
 location. Options are ‘continent’, ‘country’, ‘state’ and ‘city’. If a user
 declines your website to use her GPS-location, pointNG uses the device time
-zone as the default fallback to estimate the location. You can also opt-in to
-use IP-address based geocoding as a fallback by passing “useIpGeolocation:
-true” parameter to the installation script.
-
+zone as the default fallback to estimate the location.
 <ul>
   <li>
     3. Sign up <a>here</a> to whitelist your domain, and grab your free API-key.
@@ -66,7 +59,14 @@ Below is an example of a basic implementation that prompts the user for location
 
 ```js
 <script src="https://cdn.pointng.io/pointng.js"></script>
-const pointng = new PointNG({ level: "continent", api_key: "YOUR-API-KEY-HERE", })
-pointng.getLocation().then(function (prediction) { console.log(prediction.city)
-//Do your magic here })
+<script>
+const pointng = new PointNG({ 
+  level: "city",
+  api_key: "YOUR-API-KEY-HERE"
+})
+pointng.getLocation().then(function (prediction) { 
+  console.log(prediction)
+  //Do your magic here })
+})
+</script>
 ```
