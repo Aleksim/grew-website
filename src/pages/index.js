@@ -4,6 +4,7 @@ import Hero2 from "../components/Hero2"
 import Work from '../components/Work'
 import Posts from "../components/Posts"
 import {graphql} from "gatsby"
+import SEO from '../components/SEO'
 import "./mystyles.scss"
 import "../css/main.css"
 
@@ -13,6 +14,7 @@ export default function Home({data}) {
   const {allMdx:{nodes:posts}}=data
   return (
   <Layout>
+    <SEO />
     <Hero2/>
     <Work/>
   </Layout>

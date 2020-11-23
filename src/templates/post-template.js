@@ -5,6 +5,7 @@ import Image from 'gatsby-image'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from "gatsby"
+import SEO from '../components/SEO'
 import { GoPerson } from "react-icons/go";
 import { FaDiscord, FaTwitter, FaLinkedinIn, FaGithub} from "react-icons/fa"
 
@@ -14,13 +15,14 @@ const PostTemplate = ({ data }) => {
   const {
     mdx: {
       frontmatter: { title, category, image, date, author},
+      excerpt,
       body,
     },
   } = data
   return (
     <Layout>
+      <SEO title={title} description={excerpt} image={image}/>
       <div>
-
         <div className="blog-hero-image">
                 <Image className="big-image" style={{
                     
@@ -84,6 +86,7 @@ export const query = graphql`
         readTime
         slug
       }
+      excerpt
       body
     }
   }

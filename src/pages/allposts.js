@@ -2,12 +2,14 @@ import React from 'react'
 import Hero3 from "../components/Hero3"
 import Layout from "../components/Layout"
 import Posts from '../components/Posts'
+import SEO from '../components/SEO'
 import {graphql} from 'gatsby'
 
 const postsPage = ({data}) => {
     const {allMdx:{nodes:posts}}=data
     return (
   <Layout>
+    <SEO title="Blog | All Posts" />
     <Hero3/>
     <Posts posts={posts} title="All Posts" />
   </Layout>
