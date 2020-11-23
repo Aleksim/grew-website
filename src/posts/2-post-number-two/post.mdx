@@ -10,7 +10,7 @@ readTime: 2
 
 import { Link } from "gatsby"
 
-To detect your website or webapp users’ location, you have options to either use browser’s Geolocation API or the client’s IP-address. Whether your goal is to eg. personalize content, target advertisement, or create redirects, you need to send your users’ latitude and longitude data, or IP-address to a third-party geocoding service. These services extract the readable place names from the data and return it to your client.
+To detect your website or webapp users' location, you have options to either use browser's Geolocation API or the client's IP-address. Whether your goal is to eg. personalize content, target advertisement, or create redirects, you need to send your users' latitude and longitude data, or IP-address to a third-party geocoding service. These services extract the readable place names from the data and return it to your client.
 
 <p>
   The process is straightforward, but it comes with privacy drawbacks.
@@ -18,11 +18,11 @@ To detect your website or webapp users’ location, you have options to either u
 
 ## Hyper-secure location detection with pointNG
 
-To save time and avoid privacy-headaches, follow these steps to identify your user’s GPS-based location without sending their coordinates away from the browser.
+To save time and avoid privacy-headaches, follow these steps to identify your user's GPS-based location without sending their coordinates away from the browser.
 
 <ul>
   <li>
-    1. Install pointNG location detection javascript plugin to your website:
+    1. Install pointNG location detection javascript plugin on each page on your website you wish to use your users' location:
   </li>
 </ul>
 
@@ -36,26 +36,26 @@ To save time and avoid privacy-headaches, follow these steps to identify your us
 
 ```js
 const pointng = new PointNG({
- level: ‘country’,
- api_key: ‘YOUR-API-KEY-HERE’
+ level: Check these examples for what types of personalizations you can make based on a user's locationcountry',
+ api_key: 'YOUR-API-KEY-HERE'
 });
 ```
 
-Use the ‘level’ parameter to choose the level you wish to identify your users’
-location. Options are ‘continent’, ‘country’, ‘state’ and ‘city’. If a user
+Use the 'level' parameter to choose the level you wish to identify your users'
+location. Options are 'continent', 'country', 'state' and 'city'. If a user
 declines your website to use her GPS-location, pointNG uses the device time
 zone as the default fallback to estimate the location.
 <ul>
   <li>
-    3. Sign up <a>here</a> to whitelist your domain, and grab your free API-key.
-    Paste the key to the initialization script’s ‘api_key’ parameter.
+    3. Sign up <a href="https://www.poitnng.io/?utm_source=blog&utm_medium=website&utm_campaign=get_user_location_securely_in_javascript_without_privacy_hassle" target="_blank">here</a> to whitelist your domain, and grab your free API-key.
+    Paste the key to the initialization script's 'api_key' parameter.
   </li>
 </ul>
 
 ## Do your magic!
 
-That’s it! Now you are ready to start building location-based web services securely without the fear of data misuses and privacy headaches.
-Below is an example of a basic implementation that prompts the user for location permission and console.logs the users’ location.
+That's it! Now you are ready to start building location-based web services securely without the fear of data misuses and privacy headaches.
+Below is an example of a basic implementation that prompts the user for location permission and console.logs the users' location.
 
 ```js
 <script src="https://cdn.pointng.io/pointng.js"></script>
@@ -70,3 +70,5 @@ pointng.getLocation().then(function (prediction) {
 })
 </script>
 ```
+
+Check <a href="https://www.poitnng.io/?utm_source=blog&utm_medium=website&utm_campaign=get_user_location_securely_in_javascript_without_privacy_hassle#examples" target="_blank">these examples</a> for what types of personalizations you can make based on a user's location. 
