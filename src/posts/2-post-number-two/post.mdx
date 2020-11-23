@@ -55,7 +55,7 @@ zone as the default fallback to estimate the location.
 ## Do your magic!
 
 That's it! Now you are ready to start building location-based web services securely without the fear of data misuses and privacy headaches.
-Below is an example of a basic implementation that prompts the user for location permission and console.logs the users' location.
+Below is an example of a basic implementation that prompts the user for location permission and logs the user's location.
 
 ```js
 <script src="https://cdn.pointng.io/pointng.js"></script>
@@ -66,7 +66,7 @@ const pointng = new PointNG({
 })
 pointng.getLocation().then(function (prediction) { 
   console.log(prediction)
-  //Do your magic here })
+  //Do your magic here
 })
 </script>
 ```
