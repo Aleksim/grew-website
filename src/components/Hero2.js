@@ -13,7 +13,7 @@ const Hero2 = () => {
 }
     return (
 <div className="section hero-color ">
-  <div className="container is-max-desktop">
+  <div className="container is-max-desktop hero-body">
     <h1 className="logo">
     Digital Innovation Grewing and Brewing.
     </h1>
