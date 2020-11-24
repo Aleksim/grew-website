@@ -1,0 +1,61 @@
+---
+title: Secure Location Detection in JavaScript with pointNG
+slug: secure-location-detection-in-javascript-with-pointng
+image: ./images/pointng_intro.png
+date: 2020-11-22
+author: Kimmo Ihanus
+category: Developer Tools
+readTime: 2
+---
+
+import { Link } from "gatsby"
+
+<a href="https://www.pointng.io" target="_blank">pointNG</a> is a tool that enables developers to build location-based websites with maximum privacy. It's a piece of code that you can insert to your website and then use our functions to create location-based services without the need to worry about privacy-related risks (GDPR / CCPA / Privacy Policy updates etc.).
+
+<p>
+  Unlike traditional geocoding services, pointNG does not share GPS-coordinate data with external services. It achieves this by using machine learning directly in the browser without sending coordinate-data away to servers.
+</p>
+
+## How to get started with pointNG
+
+Sign up <a href="https://app.pointng.io/register">here</a> for a free API key here, copy the below script and paste it before your website HTML's closing body element. After reloading the page and accepting the location permission, you'll see the result in your console.
+
+```js
+<script src="https://cdn.pointng.io/pointng-min.js"></script>
+<script>
+  const pointng = new PointNG({
+    api_key: "api-key",
+    level: 'city'
+  });
+  pointng.getLocation().then(function(prediction) {
+    console.log(pointng.prediction)
+  })
+</script>
+```
+
+## Features
+
+pointNG is a privacy-friendly "one-stop-shop" that offers all the goods for client-side location detection.
+
+After installing pointNG to a website, you can use pointNG's functions to identify your website visitor's location. If the visitor accepts the location permission prompt, pointNG will use it's machine learning to securely predict the user's location. If the visitor does not permit the use of GPS-location, by default, pointNG will use the browser's time zone as a fallback to estimate the user's location.
+
+pointNG let's you define the level you wish to detect GPS-location by using the 'level' parameter. If you wish to give the power to your users to determine the level of identification, pointNG has a user control panel that you can integrate as a widget to your website. Read more about the widget <a href="https://app.gitbook.com/@globalreactioncompany/s/pointng/pointng-widget" target="blank">here</a>.
+
+Here is an example installation with all the available parameters configured:
+
+```js
+<script src="https://cdn.pointng.io/pointng.js"></script>
+<script>
+const pointng = new PointNG({
+   level: 'country',
+   api_key: 'YOUR-API-KEY-HERE',
+   currentWidgetPosition: 'right',
+   privacyPolicyLink: 'YOUR-PRIVACY-POLICY-URL'
+});
+  pointng.getLocation().then(function(prediction) {
+    console.log(pointng.prediction)
+  })
+</script>
+```
+
+Read the docs <a href="https://app.gitbook.com/@globalreactioncompany/s/pointng/" target="_blank">heres</a> for more details and examples.
