@@ -52,6 +52,11 @@
   background-color: transparent;
 }
 
+ul {
+  list-style-type: circle !important;
+}
+
+
 li {
   margin-bottom: 10px !important;
 }

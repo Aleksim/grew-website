@@ -20,19 +20,17 @@ To detect your website or webapp users' location, you have options to either use
 
 To save time and avoid privacy-headaches, follow these steps to identify your user's GPS-based location without sending their coordinates away from the browser.
 
-<ul>
-  <li>
-    1. Install pointNG location detection javascript plugin on each page on your website you wish to use your users' location:
-  </li>
-</ul>
+<p>
+1. Install pointNG location detection javascript plugin on each page on your website you wish to use your users' location:
+</p>
 
 ```js
 <script src="https://cdn.pointng.io/pointng-min.js"></script>
 ```
 
-<ul>
-  <li>2. Paste this code below to initialize and configure pointNG:</li>
-</ul>
+<p>
+ 2. Paste this code below to initialize and configure pointNG:
+</p>
 
 ```js
 const pointng = new PointNG({
@@ -45,12 +43,10 @@ Use the 'level' parameter to choose the level you wish to identify your users'
 location. Options are 'continent', 'country', 'state' and 'city'. If a user
 declines your website to use her GPS-location, pointNG uses the device time
 zone as the default fallback to estimate the location.
-<ul>
-  <li>
+<p>
     3. Sign up <a href="https://app.pointng.io/register?utm_source=blog&utm_medium=website&utm_campaign=get_user_location_securely_in_javascript_without_privacy_hassle" target="_blank">here</a> to whitelist your domain, and grab your free API-key.
     Paste the key to the initialization script's 'api_key' parameter.
-  </li>
-</ul>
+</p>
 
 ## Do your magic!
 
