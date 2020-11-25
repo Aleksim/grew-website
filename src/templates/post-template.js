@@ -35,7 +35,7 @@ const PostTemplate = ({ data }) => {
             {/*image*/}
 
 
-            <h2 className="logo">{title}</h2>
+            <h1 className="logo">{title}</h1>
 
             {/*author info*/}
             <div className="upperbanner">
